@@ -12,10 +12,9 @@ The workflow began with database management and transitioned into advanced sprea
 - **SQL Server**: Used for initial data cleaning, handling nulls, and filtering duplicate records.
 - **Excel Integration**: The cleaned dataset was exported from SQL and imported into Excel.
 - **Power Query Validation**: Power Query was utilized to perform a final cross-check on data types and ensure consistent labeling of missing values as "Unknown."
+
 ## 🧹 Data Cleaning Process (SQL)
 The following SQL operations were executed to ensure data integrity:
-
-```sql
 -- 1. Handling Missing Customer IDs (Imputation)
 UPDATE dbo.online_retail
 SET CustomerID = 'Unknown' WHERE CustomerID IS NULL;
