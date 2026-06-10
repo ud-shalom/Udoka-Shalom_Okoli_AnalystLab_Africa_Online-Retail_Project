@@ -12,7 +12,7 @@ The workflow began with database management and transitioned into advanced sprea
 * **Excel Integration:** The cleaned dataset was exported from SQL and imported into Excel.
 * **Power Query Validation:** Power Query was utilized to perform a final cross-check on data types and ensure consistent labeling of missing values as "Unknown."
 
-* ## 🧹 Data Cleaning Process (SQL)
+* ##🧹 Data Cleaning Process (SQL)
 The following SQL operations were executed to ensure data integrity:
 ```sql
 -- 1. Handling Missing Customer IDs (Imputation)
@@ -26,10 +26,9 @@ WITH DuplicateCTE AS (
 DELETE FROM DuplicateCTE WHERE row_num > 1;
 -- 3. Cleaning Negative Quantities (Returns/Cancellations)
 DELETE FROM dbo.online_retail WHERE Quantity < 0;
-## 📊 Statistical Analysis & KPIs
+##📊 Statistical Analysis & KPIs
 To evaluate the health and performance of the Online Retail business, I performed statistical analysis in Excel using descriptive statistics and business KPI calculations.
-### Key Statistical Metrics
-
+###Key Statistical Metrics
 | Metric | Result | Business Significance |
 | :--- | :--- | :--- |
 | **Total Revenue** | **$9.75M** | Measures total sales generated during the analysis period. |
