@@ -29,10 +29,11 @@ DELETE FROM DuplicateCTE WHERE row_num > 1;
 
 -- 3. Cleaning Negative Quantities (Returns/Cancellations)
 DELETE FROM dbo.online_retail WHERE Quantity < 0;
-## 📊 Statistical Analysis & KPIs
 
+## 📊 Statistical Analysis & KPIs
 To evaluate the health and performance of the Online Retail business, I performed statistical analysis in Excel using descriptive statistics and business KPI calculations.
-### **Key Statistical Metrics**
+
+### Key Statistical Metrics
 
 | Metric | Result | Business Significance |
 | :--- | :--- | :--- |
@@ -43,7 +44,7 @@ To evaluate the health and performance of the Online Retail business, I performe
 | **Mode (Quantity)** | Calculated | Identifies the most frequently purchased quantity. |
 | **Standard Deviation** | Calculated | Measures volatility and variability in customer spending. |
 
-### **Excel Formulas Applied**
+### Excel Formulas Applied
 ```excel
 =SUM(Revenue)
 =COUNT(OrderID)
@@ -84,8 +85,8 @@ To evaluate the health and performance of the Online Retail business, I performe
 3. **Market Expansion**: Increase marketing efforts in high-growth international markets.
 4. **Inventory Planning**: Optimize stock levels based on top-performing product velocity.
 5. **Segmentation**: Use customer behavior data to improve targeted promotional offers.
-## 🏆 Project Highlights
 
+## 🏆 Project Highlights
 - ✔ **Data Cleaning using SQL**
 - ✔ **Data Validation and Quality Checks**
 - ✔ **Statistical Analysis in Excel**
@@ -102,8 +103,4 @@ To evaluate the health and performance of the Online Retail business, I performe
 **Project by: U.S. OKOLI**
 *Part of the AnalystLab Africa Data Analytics Internship*
 
-#DataAnalytics #DataAnalysis #ExcelDashboard #Excel #SQL
-#BusinessIntelligence #DataVisualization #Analytics
-#RetailAnalytics #DashboardDesign #GitHubPortfolio
-#DataCleaning #PivotTables #KPIAnalysis
-#Statistics #BusinessAnalysis #AnalystLabAfrica
+#DataAnalytics #DataAnalysis #ExcelDashboard #Excel #SQL #BusinessIntelligence #DataVisualization #Analytics #RetailAnalytics #DashboardDesign #GitHubPortfolio #DataCleaning #PivotTables #KPIAnalysis #Statistics #BusinessAnalysis #AnalystLabAfrica
