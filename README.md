@@ -14,25 +14,20 @@ The workflow began with database management and transitioned into advanced sprea
 
 * ## 🧹 Data Cleaning Process (SQL)
 The following SQL operations were executed to ensure data integrity:
-
 ```sql
 -- 1. Handling Missing Customer IDs (Imputation)
 UPDATE dbo.online_retail 
 SET CustomerID = 'Unknown' WHERE CustomerID IS NULL;
-
 -- 2. Removing Duplicates
 WITH DuplicateCTE AS (
     SELECT *, ROW_NUMBER() OVER(PARTITION BY InvoiceNo, StockCode ORDER BY InvoiceNo) as row_num
     FROM dbo.online_retail
 )
 DELETE FROM DuplicateCTE WHERE row_num > 1;
-
 -- 3. Cleaning Negative Quantities (Returns/Cancellations)
 DELETE FROM dbo.online_retail WHERE Quantity < 0;
-
 ## 📊 Statistical Analysis & KPIs
 To evaluate the health and performance of the Online Retail business, I performed statistical analysis in Excel using descriptive statistics and business KPI calculations.
-
 ### Key Statistical Metrics
 
 | Metric | Result | Business Significance |
