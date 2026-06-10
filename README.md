@@ -32,10 +32,10 @@ DELETE FROM DuplicateCTE WHERE row_num > 1;
 DELETE FROM dbo.online_retail WHERE Quantity < 0
 
 
-## 📊** Statistical Analysis & KPIs**
+## 📊 ** Statistical Analysis & KPIs**
 To evaluate the health and performance of the Online Retail business, I performed statistical analysis in Excel using descriptive statistics and business KPI calculations.
 
-###** Key Statistical Metrics**
+### **Key Statistical Metrics**
 
 | Metric | Result | Business Significance |
 | :--- | :--- | :--- |
