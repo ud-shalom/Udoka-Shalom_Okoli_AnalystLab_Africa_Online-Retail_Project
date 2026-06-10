@@ -117,7 +117,7 @@ Segmentation: Use customer behavior data to improve targeted promotional offers.
 
 ✔ Business Recommendations & Insights
 
-🚀 Connect With Me
+### 🚀 Connect With Me
 Project by: U.S. OKOLI
 Part of the AnalystLab Africa Data Analytics Internship
 
