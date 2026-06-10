@@ -44,8 +44,6 @@ To evaluate the health and performance of the Online Retail business, I performe
 | **Standard Deviation** | Calculated | Measures volatility and variability in customer spending. |
 
 ### **Excel Formulas Applied**
-
-```excel
 =SUM(Revenue)
 =COUNT(OrderID)
 =AVERAGE(Revenue)
@@ -58,7 +56,6 @@ To evaluate the health and performance of the Online Retail business, I performe
 =SUM(Revenue)/COUNT(OrderID)
 
 ### Part 2: Advanced Business Insights, Highlights, and Connect
-```markdown
 ## 🔍 **Advanced Business Insights**
 
 ### **Customer Analysis**
