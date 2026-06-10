@@ -26,9 +26,10 @@ WITH DuplicateCTE AS (
 DELETE FROM DuplicateCTE WHERE row_num > 1;
 -- 3. Cleaning Negative Quantities (Returns/Cancellations)
 DELETE FROM dbo.online_retail WHERE Quantity < 0;
-##📊 Statistical Analysis & KPIs
+
+## 📊 Statistical Analysis & KPIs
 To evaluate the health and performance of the Online Retail business, I performed statistical analysis in Excel using descriptive statistics and business KPI calculations.
-###Key Statistical Metrics
+### Key Statistical Metrics
 | Metric | Result | Business Significance |
 | :--- | :--- | :--- |
 | **Total Revenue** | **$9.75M** | Measures total sales generated during the analysis period. |
@@ -52,7 +53,6 @@ To evaluate the health and performance of the Online Retail business, I performe
 =SUM(Revenue)/COUNT(OrderID)
 
 ## 🔍 Advanced Business Insights
-
 ### **Customer Analysis**
 - A large portion of transactions are associated with "**Unknown**" customers, limiting customer segmentation opportunities.
 - Identifying these customers would improve retention strategies and personalized marketing campaigns.
