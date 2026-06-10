@@ -1,3 +1,5 @@
+## 📈 Dashboard Preview
+![Online Retail Dashboard](online%20retail%20dashboard%201.png)
 # Online Retail E-commerce Sales Analysis
 **Project by: U.S. OKOLI**
 
@@ -27,35 +29,82 @@ DELETE FROM DuplicateCTE WHERE row_num > 1;
 
 -- 3. Cleaning Negative Quantities (Returns/Cancellations)
 DELETE FROM dbo.online_retail WHERE Quantity < 0;
-
-### Block 3: Statistical Analysis and KPIs
-```markdown
 ## 📊 Statistical Analysis & KPIs
-To understand purchasing behavior, the following statistical measures were calculated in Excel:
 
-| Metric | Purpose |
-| :--- | :--- |
-| **Mean (Average)** | To identify the average order value per transaction. |
-| **Median** | To understand the typical transaction value, minimizing the impact of outliers. |
-| **Mode** | To find the most frequently purchased product quantity. |
-| **Max / Min** | To determine the highest and lowest individual sales transactions. |
-| **Standard Deviation** | To measure the volatility or variance in customer spending. |
+To evaluate the health and performance of the Online Retail business, I performed statistical analysis in Excel using descriptive statistics and business KPI calculations.
 
-## 📈 Pivot Tables & Dashboard Creation
-* **Pivot Table Setup:** Created structured tables to aggregate `Total Revenue` by `Country` and `Product Category`.
-* **Dashboard Visualization:** Built an interactive dashboard featuring monthly revenue trends, top-performing products, and geographic analysis.
+### **Key Statistical Metrics**
 
-## 💡 Dashboard Insights
-The **Online Retail Sales Dashboard** provides a detailed perspective on e-commerce performance:
+| Metric | Result | Business Significance |
+| :--- | :--- | :--- |
+| **Total Revenue** | **$9.75M** | Measures total sales generated during the analysis period. |
+| **Total Orders** | **527K** | Indicates transaction volume and business activity level. |
+| **Average Order Value (AOV)** | **$18.48** | Average customer spend per transaction. |
+| **Median Revenue** | Calculated | Typical transaction value, reducing outlier influence. |
+| **Mode (Quantity)** | Calculated | Identifies the most frequently purchased quantity. |
+| **Standard Deviation** | Calculated | Measures volatility and variability in customer spending. |
 
-* **Revenue Drivers:** The analysis identifies specific countries that generate the highest volume of transactions.
-* **Product Velocity:** Using the Mode calculation, we identified the most frequently purchased quantity.
-* **Spending Behavior:** The Standard Deviation analysis reveals significant variance in customer spending.
-* **Operational Efficiency:** The removal of negative quantities provided a clearer view of actual net sales.
-* **Strategic Recommendation:** We recommend implementing a loyalty program for the high-frequency customers identified.
+### **Excel Formulas Applied**
+```excel
+=SUM(Revenue)
+=COUNT(OrderID)
+=AVERAGE(Revenue)
+=MEDIAN(Revenue)
+=MODE.SNGL(Quantity)
+=MAX(Revenue)
+=MIN(Revenue)
+=STDEV.P(Revenue)
+=VAR.P(Revenue)
+=SUM(Revenue)/COUNT(OrderID)
 
-## 📈 Dashboard Preview
-![Retail Dashboard](retail_dashboard.png)
+## 🔍 Advanced Business Insights
 
----
-*Project documentation for AnalystLab Africa submission.*
+### **Customer Analysis**
+- A large portion of transactions are associated with "**Unknown**" customers, limiting customer segmentation opportunities.
+- Identifying these customers would improve retention strategies and personalized marketing campaigns.
+- Customer acquisition appears strong, but customer identification remains a key challenge.
+
+### **Revenue Analysis**
+- Revenue generation remained relatively stable throughout the observed period.
+- Seasonal peaks indicate periods of increased consumer demand.
+- Consistent monthly revenue demonstrates business resilience and strong market presence.
+
+### **Product Performance**
+- Revenue is driven by a mix of retail products and service-related items.
+- Top-performing products contribute disproportionately to total revenue.
+- Product concentration analysis suggests opportunities for inventory optimization.
+
+### **Geographic Analysis**
+- The **United Kingdom** accounts for the majority of total sales.
+- Secondary markets such as **Germany** and the **Netherlands** show growth potential.
+- Geographic diversification could reduce dependency on a single market.
+
+### **Strategic Recommendations**
+1. **CRM Improvement**: Prioritize systems to capture customer IDs and reduce "Unknown" records.
+2. **Loyalty Programs**: Launch targeted initiatives to increase **Average Order Value (AOV)**.
+3. **Market Expansion**: Increase marketing efforts in high-growth international markets.
+4. **Inventory Planning**: Optimize stock levels based on top-performing product velocity.
+5. **Segmentation**: Use customer behavior data to improve targeted promotional offers.
+## 🏆 Project Highlights
+
+- ✔ **Data Cleaning using SQL**
+- ✔ **Data Validation and Quality Checks**
+- ✔ **Statistical Analysis in Excel**
+- ✔ **Pivot Table Development**
+- ✔ **KPI Calculation and Business Metrics**
+- ✔ **Interactive Dashboard Design**
+- ✔ **Customer Behavior Analysis**
+- ✔ **Product Performance Analysis**
+- ✔ **Revenue Trend Analysis**
+- ✔ **Geographic Sales Analysis**
+- ✔ **Business Recommendations & Insights**
+
+### 🚀 Connect With Me
+**Project by: U.S. OKOLI**
+*Part of the AnalystLab Africa Data Analytics Internship*
+
+#DataAnalytics #DataAnalysis #ExcelDashboard #Excel #SQL
+#BusinessIntelligence #DataVisualization #Analytics
+#RetailAnalytics #DashboardDesign #GitHubPortfolio
+#DataCleaning #PivotTables #KPIAnalysis
+#Statistics #BusinessAnalysis #AnalystLabAfrica
