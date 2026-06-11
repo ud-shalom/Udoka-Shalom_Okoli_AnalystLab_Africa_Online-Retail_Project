@@ -98,6 +98,87 @@ To evaluate the health and performance of the Online Retail business, I performe
 - ✔ **Geographic Sales Analysis**
 - ✔ **Business Recommendations & Insights**
 
+
+## 📈 Dashboard Preview
+![Netflix Dashboard](netflix%20dashboard%202.png)
+
+# Netflix Content Analysis Project
+**Project by:** U.S. Okoli  
+**Part of the AnalystLab Africa Data Analytics Internship**
+
+## 📋 Overview
+This project provides an end-to-end analysis of the Netflix content catalog. The objective was to transform raw data into an interactive dashboard, providing clarity on content distribution, platform strategy, and production trends.
+
+## 🔗 Data Connection: SQL Server to Power BI
+The data pipeline was established by importing the cleaned SQL dataset directly into Power BI Desktop.
+
+### Connection Method
+- SQL Server Database connector.
+
+### Workflow
+- The cleaned SQL table was loaded into Power BI to create a high-performance data model for visualization.
+## 🧹 Data Cleaning Process
+
+### Phase 1: SQL Server (Structural Cleaning)
+The following operations were performed in SQL to ensure data integrity:
+-- 1. Handling Missing Values
+UPDATE dbo.netflix_titles 
+SET director = 'Unknown' WHERE director IS NULL;
+
+UPDATE dbo.netflix_titles 
+SET cast = 'Unknown' WHERE cast IS NULL;
+
+-- 2. Duplicate Check
+WITH DuplicateCheck AS (
+    SELECT *, ROW_NUMBER() OVER(PARTITION BY show_id ORDER BY show_id) as row_num
+    FROM dbo.netflix_titles
+)
+SELECT * FROM DuplicateCheck WHERE row_num > 1;
+
+-- 3. Optimization
+EXEC sp_rename 'dbo.netflix_titles.type', 'content_type', 'COLUMN';
+
+### Phase 2: Power BI (Final Cross-Check & Validation)
+After importing the cleaned SQL dataset into Power BI, I utilized Power Query to cross-check the data and perform final refinements:
+
+- **Data Type Enforcement**: Verified that `release_year` was set to integer and `date_added` was set to the correct Date format to ensure time-series accuracy.
+- **Consistency Check**: Performed a final validation to ensure all nulls in categorical columns were replaced with "Unknown," ensuring full dataset uniformity.
+
+## 🧮 DAX Measures
+The following measures were created in Power BI to drive the dashboard KPIs:
+
+| Measure | Formula |
+| :--- | :--- |
+| **Total Titles** | Total Titles = COUNTROWS('netflix_titles') |
+| **Movie Count** | Total Movies = CALCULATE(COUNTROWS('netflix_titles'), 'netflix_titles'[content_type] = "Movie") |
+| **TV Show Count** | Total TV Shows = CALCULATE(COUNTROWS('netflix_titles'), 'netflix_titles'[content_type] = "TV Show") |
+| **Unique Countries** | Total Countries = DISTINCTCOUNT('netflix_titles'[country]) |
+
+## 💡 Dashboard Insights: Netflix Content Overview
+
+The **Netflix Content Overview Dashboard** provides a comprehensive, data-driven narrative of the platform's library. Below is a detailed breakdown of the key findings:
+
+- **Content Strategy & Distribution**: 
+    - The library is heavily dominated by **Movies**, which account for approximately **67%** of total content, compared to **33%** for **TV Shows**.
+    - This distribution reflects a strategic priority on high-turnover, short-form entertainment designed to drive consistent subscriber engagement.
+
+- **Temporal Production Trends**: 
+    - The data highlights a significant "Gold Rush" period for production, which **peaked in 2018** with **1,147 titles** released in that year alone.
+    - Compared to **2015** (the lowest output in the observed dataset), production levels in 2018 grew by a massive **104.82%**, demonstrating Netflix’s aggressive scaling of its content acquisition strategy.
+
+- **Market Leadership & Global Footprint**: 
+    - The **United States** stands as the clear market leader in content production, significantly outpacing all other nations in volume.
+    - With **749 unique countries** represented in the dataset, the dashboard confirms Netflix’s successful global distribution model, even while production remains concentrated in primary markets.
+
+- **Audience Preferences (Genres & Ratings)**: 
+    - **Dramas** and **Documentaries** emerge as the most popular genres, suggesting that the core audience shows a strong preference for high-quality storytelling and factual, educational programming.
+    - The concentration of content in **TV-MA** and **TV-14** ratings suggests that the platform primarily targets a mature and young-adult demographic.
+
+- **Strategic Recommendations**: 
+    - While the U.S. dominance is clear, the volume of content varies wildly—ranging from 110 to 2,818 titles across the top 10 countries.
+    - There is a clear **strategic opportunity** to further diversify production in secondary markets to better align with local cultural preferences and deepen market penetration outside of North America.
+---
+
 ### 🚀 **Connect With Me**
 **Project by: U.S. OKOLI**
 *Part of the AnalystLab Africa Data Analytics Internship*
