@@ -100,7 +100,8 @@ To evaluate the health and performance of the Online Retail business, I performe
 
 
 ## 📈 Dashboard Preview
-![Netflix Dashboard](netflix%20dashboard%202.png)
+### Netflix Content Dashboard
+![Netflix Content Dashboard](netflix%20dashboard%202.png)
 
 # Netflix Content Analysis Project
 **Project by:** U.S. Okoli  
